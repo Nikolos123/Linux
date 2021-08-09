@@ -6,13 +6,19 @@ param=$1
 if  sestatus  | grep "disabled"  ; then
 if [ $# -eq 1 ]; then
 setenforce 1
-echo Servise start
+echo Servise enable
 else
 echo Servise disabled
 exit=1;
 fi
 else
+if [ $# -eq 1 ]; then
+setenforce 0
+echo Servise disable
+exit=1
+else
 echo Servise enable;
+fi
 fi
 
 
