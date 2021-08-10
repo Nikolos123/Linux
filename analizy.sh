@@ -1,6 +1,8 @@
 #!/usr/bin/bash
 
 echo "If sestatus enable input 0 and i it's desabled or 1 and i it's enable"
+echo "dock file /etc/selinux/config"
+
 param=$1
 
 
